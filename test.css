@@ -1,0 +1,286 @@
+@import url("normalize.css");
+@import url("buttons.css");
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+.h3{
+    color:#000;
+}
+.container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.dialogue {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: white;
+    font-size: 0.1em;
+}
+
+
+.dialogue.open {
+    font-size: 1em;
+    color: #000000;
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    text-align: left;
+} 
+
+.site-header {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+    color: white;
+    background-image: url("windows.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+}
+
+.navbar {
+
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    padding: -1rem 0;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .container nav ul {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: black;
+}
+
+.navbar .container nav ul a {
+    color: black;
+    text-decoration: none;
+}
+
+.site-main > section {
+    padding: 5rem 0;
+}
+
+#presentation .container {
+    display: flex;
+    gap: 1rem;
+}
+
+#mes-projets {
+    color: #000000;
+}
+
+.bg-light {
+    background-color: #bdbdbd;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.competences {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    background-color: white;
+}
+
+.card img {
+    height: 150px;
+    max-width: 100%;
+    object-fit: contain;
+    filter: grayscale(1);
+    transition: 0.5s;
+}
+
+.card:hover img {
+    filter: grayscale(0);
+    transform: scale(1.1) rotate(5deg);
+}
+
+#filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+#filters button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#filters button.active {
+    border-bottom: 2px solid black;
+}
+
+#projets {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#projets article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    background-color: lightgray;
+    transition: 0.5s;
+    transform: scale(0);
+}
+
+#projets article.active {
+    transform: scale(1);
+}
+
+
+/* Format tablette */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .competences {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Format smartphone */
+@media screen and (max-width: 425px) {
+    #presentation .container {
+        flex-direction: column;
+    }
+
+    .competences {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.btn-primary {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: grey;
+
+    &:hover {
+        background-color: white;
+        color: var(--color-primary);
+    }
+}
+
+.btn-primary-outline {
+    border-color: var(--color-primary);
+    background-color: white;
+    color: var(--color-primary);
+
+    &:hover {
+        background-color: var(--color-primary);
+        color: grey;
+    }
+}
+
+.btn-secondary {
+    border-color: var(--color-secondary);
+    background-color: var(--color-secondary);
+    color: white;
+
+    &:hover {
+        background-color: white;
+        color: var(--color-secondary);
+    }
+}
+
+.btn-secondary-outline {
+    border-color: var(--color-secondary);
+    background-color: white;
+    color: var(--color-secondary);
+
+    &:hover {
+        background-color: var(--color-secondary);
+        color: white;
+    }
+}
+
+.theme {
+    background: none;
+    border: none; /* Si tu veux aussi enlever la bordure */
+    color: #000; /* Assure-toi que le texte soit visible */
+}
+
+body .site-main #mes-projets .container #projets .h4{
+    color: var(--text-color);
+}
+
+.incre {
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: gray;
+}

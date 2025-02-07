@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LyricsFinder - Recherche de paroles</title>
+</head>
+<body>
+
+    <h1>LyricsFinder - Rechercher les paroles d'une chanson</h1>
+
+    <form id="searchForm">
+        <label for="author">Auteur :</label><br>
+        <input type="text" id="author" name="author" required><br><br>
+        <label for="title">Titre de la chanson :</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+        <button type="submit">Rechercher</button>
+    </form>
+
+    <div id="lyrics"></div>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const author = document.getElementById('author').value;
+            const title = document.getElementById('title').value;
+
+            const formattedTitle = title.replace(/\s+/g, '-'); // Remplacer les espaces par des tirets
+
+            const apiUrl = `https://lyrics.api.pierre-jehan.com/music?title=${encodeURIComponent(formattedTitle)}&artist=${encodeURIComponent(author)}`;
+
+            console.log('URL construite :', apiUrl);
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Données reçues de l\'API:', data);  // Log de la réponse complète
+
+                    const songs = data['hydra:member'];
+                    const lyrics = songs[0].lyrics;
+                    if (lyrics) {
+                        document.getElementById('lyrics').innerText = lyrics;
+                    } else {
+                        document.getElementById('lyrics').innerText = 'Aucune chanson trouvée pour cet auteur et ce titre.';
+                    }
+                })
+                .catch(error => {
+                    console.error('Erreur:', error);  // Log d'erreur pour capturer toute erreur
+                });
+        });
+    </script>
+
+</body>
+</html>

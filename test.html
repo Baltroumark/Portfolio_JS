@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="test.css">
+    <script Content-Type: application src="Trotinete/script.js" defer></script>
+</head>
+<body>
+    <div id="myDialog" class="dialogue" onclick="toggleDialog()">
+        <h2>Portfolio</h2>
+        <p>Auteur : Ylan MOULARD<br>Date de création : 10 novembre 2024<br>Langages utilisés : HTML, CSS, JavaScript</p>
+    </div>
+
+    <header class="site-header">
+        <div class="navbar">
+            <div class="container">
+                <a href="#" class="site-logo">
+                    <img src="https://placehold.co/100x50" alt="Pierre Jehan">
+                </a>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="#presentation">Présentation</a>
+                        </li>
+                        <li>
+                            <a href="#mes-competences">Compétences</a>
+                        </li>
+                        <li>
+                            <a href="#projets">Projets</a>
+                        </li>
+                        <li>
+                            <button id="switchThemeButton">
+                                <svg fill="#000000" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 296.999 296.999" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M206.939,104.986c-23.993,0-43.513,19.52-43.513,43.513s19.52,43.513,43.513,43.513c23.993,0,43.513-19.52,43.513-43.513 S230.931,104.986,206.939,104.986z"></path> <path d="M206.939,58.439H90.061C40.401,58.439,0,98.839,0,148.499c0,49.66,40.401,90.061,90.061,90.061h116.877 c49.66,0,90.061-40.401,90.061-90.061C296.999,98.839,256.599,58.439,206.939,58.439z M206.939,205.167 c-31.247,0-56.668-25.421-56.668-56.668s25.421-56.668,56.668-56.668c31.247,0,56.668,25.421,56.668,56.668 S238.186,205.167,206.939,205.167z"></path> </g> </g> </g> </g></svg>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <h1>Ylan MOULARD</h1>
+
+    </header>
+
+    <main class="site-main">
+
+        <section id="presentation">
+            <div class="container">
+                <img src="https://placehold.co/300x400" alt="Pierre Jehan">
+                <div>
+                    <h2>À propos de moi</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi saepe sapiente illum numquam fuga odio, corrupti harum soluta nisi, at quidem, quam illo debitis velit voluptate maiores! Natus, adipisci asperiores.</p>
+                    <a href="#" class="btn btn-primary">
+                        Télécharger mon CV
+                    </a>
+                    <a href="#contact" class="btn btn-primary-outline">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="mes-competences" class="bg-light">
+            <div class="container">
+                <h2 class="text-center">Mes compétences</h2>
+
+                <div class="competences">
+
+                    <article class="card">
+                        <img src="html-5-logo-svgrepo-com.svg" alt="HTML">
+                        <h3 class="h3">HTML</h3>
+                    </article>
+
+                    <article class="card">
+                        <img src="CSS3_logo_and_wordmark.svg" alt="CSS">
+                        <h3 class="h3">CSS</h3>
+                    </article>
+
+                    <article class="card">
+                        <img src="logo-javascript.svg" alt="JavaScript">
+                        <h3 class="h3">JavaScript</h3>
+                    </article>
+
+                    <article class="card">
+                        <img src="php-logo.svg" alt="PHP">
+                        <h3 class="h3">PHP</h3>
+                    </article>
+
+                    <article class="card">
+                        <img src="mysql-icon.svg" alt="MySQL">
+                        <h3 class="h3">MySQL</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="mes-projets">
+            <div class="container">
+
+                <h2 class="text-center">Mes Projets</h2>
+
+                <ul id="filters">
+                    <li>
+                        <button class="active" data-category="all">Tous</button>
+                    </li>
+                    <li>
+                        <button data-category="dev-back">Dev Back</button>
+                    </li>
+                    <li>
+                        <button data-category="dev-front">Dev Front</button>
+                    </li>
+                    <li>
+                        <button data-category="reseau">Réseau</button>
+                    </li>
+                </ul>
+
+                <div id="projets">
+
+                    <article class="active" data-categories="dev-front dev-back">
+                        <h4 class="h4">Alterna Tri</h3>
+                    </article>
+
+                    <article class="active" data-categories="dev-front dev-back reseau">
+                        <h4 class="h4">Work Together</h3>
+                    </article>
+
+                    <article class="active" data-categories="dev-front">
+                        <h4 class="h4">Stage 1ère année</h3>
+                    </article>
+
+                    <article class="active" data-categories="dev-front dev-back">
+                        <h4 class="h4">Stage 2ème année</h3>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+ 
+    </main>
+
+    <footer class="site-footer">
+
+    </footer>
+    
+</body>
+</html>
