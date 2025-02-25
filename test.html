@@ -9,19 +9,18 @@
     <script Content-Type: application src="Trotinete/script.js" defer></script>
 </head>
 <body>
-    <div id="myDialog" class="dialogue" onclick="toggleDialog()">
-        <h2>Portfolio</h2>
-        <p>Auteur : Ylan MOULARD<br>Date de création : 10 novembre 2024<br>Langages utilisés : HTML, CSS, JavaScript</p>
+    <div class="dialogue">
+        <a class="top-page" href="#accueil"><svg fill="#000000" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-108.9 -108.9 547.80 547.80" xml:space="preserve" stroke="#000000" stroke-width="33"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394 l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393 C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"></path> </g></svg></a>
     </div>
 
-    <header class="site-header">
+    <header id="accueil" class="site-header">
         <div class="navbar">
             <div class="container">
                 <a href="#" class="site-logo">
                     <img src="https://placehold.co/100x50" alt="Pierre Jehan">
                 </a>
                 <nav>
-                    <ul>
+                    <ul >
                         <li>
                             <a href="#">Accueil</a>
                         </li>
@@ -35,9 +34,9 @@
                             <a href="#projets">Projets</a>
                         </li>
                         <li>
-                            <button id="switchThemeButton">
+                            <a id="switchThemeButton">
                                 <svg fill="#000000" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 296.999 296.999" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M206.939,104.986c-23.993,0-43.513,19.52-43.513,43.513s19.52,43.513,43.513,43.513c23.993,0,43.513-19.52,43.513-43.513 S230.931,104.986,206.939,104.986z"></path> <path d="M206.939,58.439H90.061C40.401,58.439,0,98.839,0,148.499c0,49.66,40.401,90.061,90.061,90.061h116.877 c49.66,0,90.061-40.401,90.061-90.061C296.999,98.839,256.599,58.439,206.939,58.439z M206.939,205.167 c-31.247,0-56.668-25.421-56.668-56.668s25.421-56.668,56.668-56.668c31.247,0,56.668,25.421,56.668,56.668 S238.186,205.167,206.939,205.167z"></path> </g> </g> </g> </g></svg>
-                            </button>
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -68,6 +67,7 @@
 
         <section id="mes-competences" class="bg-light">
             <div class="container">
+                <span class="compet">
                 <h2 class="text-center">Mes compétences</h2>
 
                 <div class="competences">
@@ -97,10 +97,11 @@
                         <h3 class="h3">MySQL</h3>
                     </article>
                 </div>
+                </span>
             </div>
         </section>
 
-        <section id="mes-projets">
+        <section class="compet" id="mes-projets">
             <div class="container">
 
                 <h2 class="text-center">Mes Projets</h2>
@@ -123,19 +124,19 @@
                 <div id="projets">
 
                     <article class="active" data-categories="dev-front dev-back">
-                        <h4 class="h4">Alterna Tri</h3>
+                        <h3 class="h4">Alterna Tri</h3>
                     </article>
 
                     <article class="active" data-categories="dev-front dev-back reseau">
-                        <h4 class="h4">Work Together</h3>
+                        <h3 class="h4">Work Together</h3>
                     </article>
 
                     <article class="active" data-categories="dev-front">
-                        <h4 class="h4">Stage 1ère année</h3>
+                        <h3 class="h4">Stage 1ère année</h3>
                     </article>
 
                     <article class="active" data-categories="dev-front dev-back">
-                        <h4 class="h4">Stage 2ème année</h3>
+                        <h3 class="h4">Stage 2ème année</h3>
                     </article>
 
                 </div>
@@ -144,10 +145,31 @@
         </section>
  
     </main>
+    <h1 class="text-center">Actualités</h1>
+    <section class="cards-container">
+        <div class="cards">
+            <img src="poutineontop.webp" alt="Image 1" class="cards-image">
+            <div class="cards-content">
+                <h3 class="cards-title">Poutine est-il vraiment russe ?</h3>
+                <p class="cards-description">D'après les rumeurs, ces origines pourrait vous surprendre ...</p>
+            </div>
+        </div>
 
-    <footer class="site-footer">
+        <div class="cards">
+            <img src="trumpontop.webp" alt="Image 2" class="cards-image">
+            <div class="cards-content">
+                <h3 class="cards-title">Trump choisit Elon Musk</h3>
+                <p class="cards-description">Trump renforce son gouvernement avec des personnes puissantes et influentes.</p>
+            </div>
+        </div>
 
-    </footer>
-    
+        <div class="cards">
+            <img src="kimontop.webp" alt="Image 3" class="cards-image">
+            <div class="cards-content">
+                <h3 class="cards-title">Kim prendrait du viagra</h3>
+                <p class="cards-description">Kim Jong Un, ayant des problèmes avec sa compagne, trouve une solution ...</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

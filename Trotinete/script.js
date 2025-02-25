@@ -50,15 +50,3 @@ document.getElementById('switchThemeButton').addEventListener('click', function(
         theme = 0;
     }
 });
-
-function toggleDialog() {
-    const dialog = document.getElementById("myDialog");
-    dialog.classList.toggle("open"); // Ajoute ou enlève la classe 'open' pour alterner la taille
-}
-
-// Fonction pour fermer la boîte de dialogue (clic sur le bouton 'X')
-function closeDialog(event) {
-    event.stopPropagation(); // Empêche le clic sur le bouton de fermer de déclencher la fonction toggleDialog
-    const dialog = document.getElementById("myDialog");
-    dialog.classList.remove("open"); // Réduit la boîte de dialogue
-}
