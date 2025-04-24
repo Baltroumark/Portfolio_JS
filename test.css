@@ -292,7 +292,6 @@ body .site-main #mes-projets .container #projets .h4{
     flex-wrap: wrap; /* Permet aux cartes de passer à la ligne si l'écran est trop petit */
 }
 
-/* Style pour chaque carte */
 .cards {
     background-color: #fff;
     border-radius: 8px;
@@ -304,18 +303,16 @@ body .site-main #mes-projets .container #projets .h4{
 }
 
 .cards:hover {
-    transform: translateY(-5px); /* Effet de survol */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Style pour l'image de la carte */
 .cards-image {
     width: 100%;
     height: 300px;
-    object-fit: cover; /* Garantit que l'image couvre toute la largeur de la carte */
+    object-fit: cover;
 }
 
-/* Contenu de la carte */
 .cards-content {
     padding: 15px;
 }
@@ -329,4 +326,13 @@ body .site-main #mes-projets .container #projets .h4{
     font-size: 14px;
     color: #555;
     line-height: 1.6;
+}
+
+.contacter{
+    display: flex;
+    flex-direction: row;
+}
+
+.site-footer .container{
+    text-align: center;
 }
