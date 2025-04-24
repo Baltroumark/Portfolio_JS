@@ -3,23 +3,11 @@ const projets = document.querySelectorAll('#projets article');
 
 for (const button of filterButtons) {
     button.addEventListener('click', (event) => {
-        /*
-        for (const btn of filterButtons) {
-            btn.classList.remove('active');
-        }
-        */
-        // Supprimer la classe "active" sur le bouton ayant cette classe
         document.querySelector('#filters button.active').classList.remove('active');
-        // Ajouter la classe "active" sur le bouton qui a été cliqué
         event.target.classList.add('active');
-
-        // Récupérer l'attribut data-category du bouton cliqué
         const category = event.target.dataset.category;
-        // Parcourir la liste des projets (balises <article>)
         for (const projet of projets) {
-            // Récupérer l'attribut data-categories de la balise <article> et transformer la chaine de caractères en tableau
             const categories = projet.dataset.categories.split(' ');
-            // Vérifier si la catégorie du bouton cliqué est présente sur le projet
             if (categories.includes(category) || category == 'all') {
                 projet.classList.add('active');
             } else {
